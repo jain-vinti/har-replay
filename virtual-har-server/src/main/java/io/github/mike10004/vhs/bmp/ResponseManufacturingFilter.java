@@ -87,6 +87,11 @@ class ResponseManufacturingFilter extends HttpsAwareFiltersAdapter {
 
     @Override
     public HttpResponse clientToProxyRequest(HttpObject httpObject) {
+        try {
+            Thread.sleep(230);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return interceptRequest(httpObject);
     }
 

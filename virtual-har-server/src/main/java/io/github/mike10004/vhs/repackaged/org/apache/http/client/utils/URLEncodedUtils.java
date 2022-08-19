@@ -35,6 +35,7 @@ import io.github.mike10004.vhs.repackaged.org.apache.http.util.CharArrayBuffer;
 
 import javax.annotation.Nullable;
 import java.net.URI;
+import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
@@ -208,7 +209,7 @@ public class URLEncodedUtils {
                 bb.put((byte) c);
             }
         }
-        bb.flip();
+        ((Buffer)bb).flip();
         return charset.decode(bb).toString();
     }
 
