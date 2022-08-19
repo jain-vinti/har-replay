@@ -66,6 +66,12 @@ client and a Selenium Chrome WebDriver client.
 FAQ
 ---
 
+### How do I create a JAR with dependencies?
+
+To create a jar file of the project with dependencies that can directly be used to run har-replay project:
+    
+    mvn install -DskipTests
+
 ### How do I create a HAR?
 
 See https://toolbox.googleapps.com/apps/har_analyzer/ for instructions on using
